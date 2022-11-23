@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <script src="./node2json.js"></script>
+  <script>
+    const rootE = document.createElement("div");
+    rootE.innerHTML = `<p class="b" data-test="1">こんにちは</p>
+      ハロー
+      <ul class="a" role="list">
+        <li>hoge</li>
+        <li>fuga</li>
+      </ul>`;
+
+    console.log(node2json(rootE));
+
+    rootE.innerHTML = `こんにちは`;
+
+    console.log(node2json(rootE));
+
+    rootE.innerHTML = `<p class="aa">こんにちは</p>`;
+
+    console.log(node2json(rootE));
+  </script>
+</body>
+
+</html>

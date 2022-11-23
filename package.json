@@ -1,0 +1,59 @@
+{
+  "name": "@lostpetjp/node2json",
+  "version": "0.0.1",
+  "description": "Convert Node to JSON.",
+  "author": "lostpetjp <lostpetjp@gmail.com> (https://github.com/lostpetjp)",
+  "license": "MIT",
+  "main": "dist/js/node2json.cjs.js",
+  "module": "dist/js/node2json.esm.js",
+  "types": "dist/js/types/index.d.ts",
+  "svelte": "dist/js/node2json.esm.js",
+  "jsdelivr": "dist/js/node2json.min.js",
+  "unpkg": "dist/js/node2json.min.js",
+  "keywords": [
+    "node2json"
+  ],
+  "homepage": "https://lostpet.jp/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lostpet/node2json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lostpet/node2json/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@types/node": "^18.11.9",
+    "babel-loader": "^9.0.1",
+    "esbuild": "^0.15.12",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4",
+    "uglify-js": "^3.17.4"
+  },
+  "scripts": {
+    "build:scripts": "node scripts/build-scripts.js",
+    "build:modules": "node scripts/build-modules.js",
+    "build:types": "node scripts/build-types.js",
+    "check:types": "node_modules/.bin/tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    "./dist/": "./dist/",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
